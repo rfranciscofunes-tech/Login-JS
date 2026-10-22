@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Define que el documento es HTML5 y el idioma principal es español -->
+<html lang="es">
+
+<head>
+    <!-- Codificación para acentos y caracteres especiales en español -->
+    <meta charset="UTF-8">
+    <!-- Adaptación visual para dispositivos móviles y diferentes tamaños de pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la pestaña en el navegador -->
+    <title>Bienvenida</title>
+    <!-- Hoja de estilos compartida con el resto de la aplicación -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Mensaje de bienvenida tras iniciar sesión satisfactoriamente -->
+    <h2>ya te logeaste, felicidades. Ahora largo</h2>
+
+    <!-- 
+        Botón para cerrar sesión:
+        - 'type="button"': Evita comportamientos por defecto de formularios.
+        - 'onclick="logout()"': Llama a la función 'logout' en script.js al hacer clic,
+          la cual limpia el localStorage y redirige a index.html.
+        - 'id="cerrarSesion"': Identificador único del botón.
+    -->
+    <button onclick="logout()" type="button" id="cerrarSesion">Cerrar Sesion</button>
+
+    <!-- Enlace al archivo de lógica JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

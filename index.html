@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Especifica el idioma de la página como español -->
+<html lang="es">
+
+<head>
+    <!-- Configura la codificación de caracteres para permitir acentos y caracteres especiales (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Permite que la página sea responsiva y se adapte al ancho de cualquier dispositivo (móvil, tablet, pc) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>JS Clase 7</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Registrar Usuario</h1>
+    </header>
+
+    <!-- Contenido principal que envuelve el formulario -->
+    <main>
+        <!-- 
+            Formulario de registro:
+            'onsubmit="capturarDatos(event)"': Intercepta el evento de envío para procesarlo 
+            con la función JavaScript antes de que la página se recargue.
+        -->
+        <form onsubmit="capturarDatos(event)">
+            <!-- Campo para el correo electrónico -->
+            <!-- 'for="userEmail"' asocia la etiqueta con el input que tiene ese mismo 'id' -->
+            <label for="userEmail">Email:</label>
+            <!-- 'type="email"' valida que el texto tenga formato de correo (@ y dominio) -->
+            <input type="email" id="userEmail" name="userEmail" required placeholder="Ingrese su correo">
+            <br><br>
+
+            <!-- Campo para la edad del usuario -->
+            <label for="userEdad">Edad:</label>
+            <!-- 'type="number"' y 'min="1"' restringe el valor a números positivos -->
+            <input type="number" id="userEdad" name="userEdad" required placeholder="Ingrese su edad" min="1">
+            <br><br>
+
+            <!-- Campo para la contraseña (oculta los caracteres ingresados) -->
+            <label for="userPassword">Contraseña:</label>
+            <input type="password" id="userPassword" name="userPassword" required placeholder="Ingrese su contraseña">
+            <br><br>
+
+            <!-- Campo de confirmación para validar que no hubo errores al escribir la contraseña -->
+            <label for="userPassword2">Confirmar contraseña:</label>
+            <input type="password" id="userPassword2" name="userPassword2" required placeholder="Confirme su contraseña">
+            <br><br>
+
+            <!-- Botón que activa el envío (submit) del formulario -->
+            <button type="submit">Registrarse</button>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>Random text IA</footer>
+
+    <!-- Enlace al archivo JavaScript que maneja la lógica de validación y almacenamiento -->
+    <script src="script.js"></script>
+</body>
+
+</html>
